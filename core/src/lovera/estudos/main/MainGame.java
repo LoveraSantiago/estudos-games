@@ -1,4 +1,4 @@
-package lovera.estudos;
+package lovera.estudos.main;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class MainGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
-	
+
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
@@ -24,7 +24,7 @@ public class MainGame extends ApplicationAdapter {
 		batch.draw(img, 0, 0);
 		batch.end();
 	}
-	
+
 	@Override
 	public void dispose () {
 		batch.dispose();
