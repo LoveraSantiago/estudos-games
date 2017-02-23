@@ -3,10 +3,10 @@ package lovera.estudos.desktop;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
-import lovera.estudos.desktop.utils.Executavel;
+import lovera.estudos.utils.Executavel;
 import lovera.estudos.main.MainGame;
+import lovera.estudos.semnomeainda.principal.SemNomeMain;
 import lovera.estudos.tests.box2d.ApplyForce;
-import lovera.estudos.tresd.Demo3D;
 
 public class DesktopLauncher {
 
@@ -21,6 +21,9 @@ public class DesktopLauncher {
 				break;
 			case APPLYFORCE:
 				new LwjglApplication(new ApplyForce(), config);
+				break;
+			case SEMNOME:
+				new LwjglApplication(new SemNomeMain(), config);
 				break;
 		}
 	}
