@@ -13,7 +13,7 @@ import lovera.estudos.tests.box2d.ApplyForce;
 
 public class DesktopLauncher {
 
-	private static Executavel executavel = Executavel.MODELTEST;
+	private static Executavel executavel = Executavel.SEMNOME;
 
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();

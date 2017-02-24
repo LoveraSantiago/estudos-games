@@ -4,6 +4,8 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
+import lovera.estudos.utils.debugagem.Debugagem;
+
 public class MyCamera {
 
     private static final MyCamera myCamera;
@@ -12,7 +14,7 @@ public class MyCamera {
     private final Viewport viewport;
 
     private final int LARGURA_TELA = 30;
-    private final int HALTURA_TELA = 10;
+    private final int HALTURA_TELA = 20;
 
     static{
         myCamera = new MyCamera();
@@ -25,6 +27,7 @@ public class MyCamera {
 
         this.camera.position.set(this.camera.viewportWidth / 2f, this.camera.viewportHeight / 2f, 0);
         this.camera.update();
+        Debugagem.Camera.frustrumCamera(this.camera);
     }
 
     public static MyCamera getInstance() {
@@ -33,6 +36,11 @@ public class MyCamera {
 
     public void resize(int width, int heigth){
         this.viewport.update(width, heigth);
+    }
+
+    public void update(){
+        this.camera.update();
+//        Debugagem.Camera.frustrumCamera(this.camera);
     }
 
     public OrthographicCamera getCamera() {

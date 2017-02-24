@@ -1,8 +1,10 @@
 package lovera.estudos.semnomeainda.comuns;
 
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.utils.Disposable;
 
-public class MySpriteBatch {
+public class MySpriteBatch implements Disposable{
 
     private static final MySpriteBatch mySpriteBatch;
 
@@ -21,6 +23,17 @@ public class MySpriteBatch {
     }
 
     public SpriteBatch getSpriteBatch(){
-        return this.getSpriteBatch();
+        return this.spriteBatch;
+    }
+
+    @Override
+    public void dispose() {
+        this.spriteBatch.dispose();
+    }
+
+    public void desenharSprite(Sprite sprite){
+        this.spriteBatch.begin();
+        sprite.draw(this.spriteBatch);
+        this.spriteBatch.end();
     }
 }
