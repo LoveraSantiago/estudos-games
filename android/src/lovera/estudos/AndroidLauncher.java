@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import lovera.estudos.main.MainGame;
-import lovera.estudos.semnomeainda.principal.SemNomeMain;
 import lovera.estudos.tests.box2d.ApplyForce;
 import lovera.estudos.utils.Executavel;
 
@@ -25,9 +24,6 @@ public class AndroidLauncher extends AndroidApplication {
                 break;
             case APPLYFORCE:
                 initialize(new ApplyForce(), config);
-                break;
-            case SEMNOME:
-                initialize(new SemNomeMain(), config);
                 break;
         }
 	}
