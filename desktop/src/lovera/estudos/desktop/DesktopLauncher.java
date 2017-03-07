@@ -5,6 +5,7 @@ import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
+import lovera.estudos.tests.scene2d.UISimpleTest;
 import lovera.estudos.tresd.ModelTest;
 import lovera.estudos.utils.Executavel;
 import lovera.estudos.main.MainGame;
@@ -13,7 +14,7 @@ import lovera.estudos.tests.box2d.ApplyForce;
 
 public class DesktopLauncher {
 
-	private static Executavel executavel = Executavel.SEMNOME;
+	private static Executavel executavel = Executavel.UISIMPLETEST;
 
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
@@ -31,6 +32,9 @@ public class DesktopLauncher {
 				break;
 			case SEMNOME:
 				app = new SemNomeMain();
+				break;
+			case UISIMPLETEST:
+				app = new UISimpleTest();
 				break;
 		}
 		new LwjglApplication(app, config);
