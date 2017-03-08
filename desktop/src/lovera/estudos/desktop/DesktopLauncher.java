@@ -1,19 +1,20 @@
 package lovera.estudos.desktop;
 
-import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
 
+import lovera.estudos.main.MainGame;
+import lovera.estudos.pixelsize.LibGDXTest;
+import lovera.estudos.superkoalio.SuperKoalio;
+import lovera.estudos.tests.box2d.ApplyForce;
+import lovera.estudos.tests.scene2d.UISimpleTest;
 import lovera.estudos.tresd.ModelTest;
 import lovera.estudos.utils.Executavel;
-import lovera.estudos.main.MainGame;
-import lovera.estudos.semnomeainda.principal.SemNomeMain;
-import lovera.estudos.tests.box2d.ApplyForce;
 
 public class DesktopLauncher {
 
-	private static Executavel executavel = Executavel.SEMNOME;
+	private static Executavel executavel = Executavel.UISIMPLETEST;
 
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
